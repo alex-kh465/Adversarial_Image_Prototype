@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: url('https://img.freepik.com/free-photo/3d-rendering-biorobots-concept_23-2149524396.jpg?t=st=1739053382~exp=1739056982~hmac=05db071ef18c33bde2150e303d25ed91af2a35fd5198e9f057a81e4c81cd47f1&w=1060') no-repeat center center/cover;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #00c8ff;
+}
+
+select, input, button {
+    margin: 10px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+select, input {
+    background: #333;
+    color: #00c8ff;
+    border: 1px solid #555;
+}
+
+button {
+    background: #00c8ff;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+}
+
+button:hover {
+    background: #008db3;
+    transform: scale(1.05);
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.images div {
+    text-align: center;
+}
+
+.images img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    border: 2px solid #00c8ff;
+    box-shadow: 0px 4px 15px rgba(0, 200, 255, 0.5);
+    object-fit: cover;
+    border: 2px solid #00c8ff;
+    transition: transform 0.3s, width 0.3s, height 0.3s; /* Smoothly adjust size */
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+.results {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    background: rgba(0, 200, 255, 0.15);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid #00c8ff;
+    transition: opacity 0.3s ease-in-out;
+}

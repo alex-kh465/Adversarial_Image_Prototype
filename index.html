@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adversarial Attack & Defense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Adversarial Attack & Defense Simulation</h2>
+        <label>Select Model:</label>
+        <select id="model">
+            <option value="RF">Random Forest</option>
+            <option value="SVM">SVM</option>
+            <option value="KNN">KNN</option>
+            <option value="LR">Logistic Regression</option>
+        </select>
+        <br>
+        <label>Select Attack:</label>
+        <select id="attack">
+            <option value="FGSM">FGSM</option>
+            <option value="PGD">PGD</option>
+            <option value="Gaussian">Gaussian Noise</option>
+        </select>
+        <br>
+        <label>Attack Intensity:</label>
+        <input type="range" id="intensity" min="0" max="1" step="0.1" value="0.2">
+        <br>
+        <button onclick="simulateAttack()">Run Simulation</button>
+        
+        <div class="images">
+            <div>
+                <h4>Upload Image</h4>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div>
+                <h4>Original Image</h4>
+                <img id="original" src="https://via.placeholder.com/150" alt="Original">
+            </div>
+            <div>
+                <h4>Adversarial Image</h4>
+                <img id="adversarial" src="https://via.placeholder.com/150" alt="Adversarial">
+            </div>
+        </div>
+        
+        <div class="results" id="results">
+            <p>Accuracy Before Attack: <span id="before">--</span></p>
+            <p>Accuracy After Attack: <span id="after">--</span></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
